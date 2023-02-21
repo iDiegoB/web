@@ -1,0 +1,80 @@
+.section{
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    min-height: 100vh;
+}
+.panel{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000000c5;
+    transition: transform .25s ease;
+    transform: translate(0,-100%);
+}
+
+.panel.is-active{
+    transform: translate(0,0);
+}
+.panel-btn{
+    position: fixed;
+    padding: 0 !important;
+    z-index: 100;
+    bottom: 1vh;
+    right: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #000000 !important;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  
+    & a{
+        padding: 7.9vh;
+        width: 100%;
+        display: block;
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
+        color: white;
+        transition: all .3s ease;
+        &:hover{
+            font-weight: bold;
+            color: #cccccc;
+            background-color: #00000028;
+        }
+    }
+}
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+    background-color: #ffffff !important;
+}
+
+.reloj-alarma{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.stage{
+    display: flex;
+    min-height: 50vh;
+    background-color: black;
+    border: 3px solid aqua;
+}
+.ball{
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid rgb(170, 255, 255);
+}

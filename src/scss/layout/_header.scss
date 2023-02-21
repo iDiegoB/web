@@ -1,0 +1,11 @@
+.header{
+    position: sticky;
+    top: 0;
+    padding: .5em;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid;
+    & h1{
+        margin: 0 auto;
+        text-align: center;
+    }
+}
