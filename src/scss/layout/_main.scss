@@ -67,14 +67,15 @@
 .stage{
     display: flex;
     min-height: 50vh;
-    background-color: black;
-    border: 3px solid aqua;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(0, 0, 0);
 }
 .ball{
     margin: auto;
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    background-color: #ffffff;
-    border: 3px solid rgb(170, 255, 255);
+    border: 3px solid rgb(0, 0, 0);
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

@@ -83,32 +83,31 @@ function moveball(e, ball, stage) {
     $stage = d.querySelector(stage),
     limitBall = $ball.getBoundingClientRect(),
     limitStage = $stage.getBoundingClientRect();
-    console.log(limitBall,limitStage);
+  console.log(limitBall, limitStage);
   console.log(e.key);
   switch (e.keyCode) {
     case 37: //move("left")
       e.preventDefault();
-      if(limitBall.left>limitStage.left) x--;
+      if (limitBall.left > limitStage.left) x--;
       break;
     case 38: //move("up")
-    if(limitBall.top>limitStage.top){
+      if (limitBall.top > limitStage.top) {
         e.preventDefault();
         y--;
-    }
-        
+      }
       break;
     case 39: //move("right")
-    e.preventDefault();
-    if(limitBall.right<limitStage.right) x++;
+      e.preventDefault();
+      if (limitBall.right < limitStage.right) x++;
       break;
     case 40: //move("down")
-    if(limitBall.bottom<limitStage.bottom){
+      if (limitBall.bottom < limitStage.bottom) {
         e.preventDefault();
         y++;
-    } 
+      }
       break;
     default:
       break;
-    }
-    $ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+  }
+  $ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
 }
