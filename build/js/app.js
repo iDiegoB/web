@@ -161,7 +161,6 @@ function contentdiv(e, texto){
   let div;
   let text;
   let tt = d.querySelector(".imgs");
-
   div = d.createElement("div")
   div.classList.add("imgs-div")
   img = d.createElement("img");
@@ -169,6 +168,7 @@ function contentdiv(e, texto){
   text = d.createElement("p")
   text.classList.add("texto")
   text.innerHTML = `${texto}`
+  img.alt = `img-${texto}`
   div.appendChild(img);
   div.appendChild(text);
   tt.appendChild(div);
