@@ -6,6 +6,30 @@
     text-align: center;
     min-height: 100vh;
 }
+.flex{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+.seccion-titulo{
+    font-size: clamp(1.4rem, 5vw,1.6rem);
+}
+
+.tecnologias{
+    max-width: 100%;
+}
+.df{
+    text-align: left;
+    margin: 0; 
+    color: #000000;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 5vw,1.2rem);
+}
+.tt{
+    margin-top: 2rem;
+     text-align: left;
+}
 .panel{
     position: fixed;
     z-index: 99;
@@ -67,8 +91,8 @@
 .stage{
     display: flex;
     min-height: 50vh;
-    background-color: black;
-    border: 3px solid aqua;
+    background-color: rgba(0, 0, 0, 0.884);
+    border: 3px solid rgb(109, 109, 109);
 }
 .ball{
     margin: auto;
@@ -76,5 +100,20 @@
     height: 4rem;
     border-radius: 50%;
     background-color: #ffffff;
-    border: 3px solid rgb(170, 255, 255);
+    border: 3px solid rgb(109, 109, 109);
+}
+
+.texto{
+    margin-top: -.2rem;
+    font-size: .7rem;
+}
+.tecnologias-texto{
+    text-align: justify;
+}
+.imgs{
+    display: flex;
+    gap: 2rem;
+}
+.imgs-div{
+    width: 3rem;
 }

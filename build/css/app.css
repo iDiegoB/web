@@ -19,6 +19,34 @@
   min-height: 100vh;
 }
 
+.flex {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.seccion-titulo {
+  font-size: clamp(1.4rem, 5vw, 1.6rem);
+}
+
+.tecnologias {
+  max-width: 100%;
+}
+
+.df {
+  text-align: left;
+  margin: 0;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+}
+
+.tt {
+  margin-top: 2rem;
+  text-align: left;
+}
+
 .panel {
   position: fixed;
   z-index: 99;
@@ -81,8 +109,8 @@
 .stage {
   display: flex;
   min-height: 50vh;
-  background-color: black;
-  border: 3px solid aqua;
+  background-color: rgba(0, 0, 0, 0.884);
+  border: 3px solid rgb(109, 109, 109);
 }
 
 .ball {
@@ -91,7 +119,25 @@
   height: 4rem;
   border-radius: 50%;
   background-color: #ffffff;
-  border: 3px solid rgb(170, 255, 255);
+  border: 3px solid rgb(109, 109, 109);
+}
+
+.texto {
+  margin-top: -0.2rem;
+  font-size: 0.7rem;
+}
+
+.tecnologias-texto {
+  text-align: justify;
+}
+
+.imgs {
+  display: flex;
+  gap: 2rem;
+}
+
+.imgs-div {
+  width: 3rem;
 }
 
 html {
@@ -122,4 +168,73 @@ a {
 
 h1, h2, h3, h4 {
   margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.preloader {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  transition: all 1.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  position: relative;
+}
+
+.loader:after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  animation: girar 0.5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: -30px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.loader:before {
+  content: "";
+  width: 60px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: sombra-animada 0.5s linear infinite;
+  position: absolute;
+  top: 70px;
+  left: -30px;
+  border-radius: 50%;
+}
+
+@keyframes girar {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: scale(1, 0.9) translateY(18px) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@keyframes sombra-animada {
+  50% {
+    transform: scale(1.3, 1);
+  }
 }

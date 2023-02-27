@@ -1,8 +1,10 @@
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
+  loader();
   hamburgerMenu(".panel-btn", ".panel", ".menu a");
   digitalReloj("#reloj", "#activar-reloj", "#desactivar-reloj");
   alarm("../build/assets/listen.mp3", "#activar-alarma", "#desactivar-alarma");
+  img();
 });
 
 d.addEventListener("keydown", (e) => {
@@ -83,32 +85,158 @@ function moveball(e, ball, stage) {
     $stage = d.querySelector(stage),
     limitBall = $ball.getBoundingClientRect(),
     limitStage = $stage.getBoundingClientRect();
-    console.log(limitBall,limitStage);
+  console.log(limitBall, limitStage);
   console.log(e.key);
   switch (e.keyCode) {
     case 37: //move("left")
       e.preventDefault();
-      if(limitBall.left>limitStage.left) x--;
+      if (limitBall.left > limitStage.left) x--;
       break;
     case 38: //move("up")
-    if(limitBall.top>limitStage.top){
+      if (limitBall.top > limitStage.top) {
         e.preventDefault();
         y--;
-    }
-        
+      }
       break;
     case 39: //move("right")
-    e.preventDefault();
-    if(limitBall.right<limitStage.right) x++;
+      e.preventDefault();
+      if (limitBall.right < limitStage.right) x++;
       break;
     case 40: //move("down")
-    if(limitBall.bottom<limitStage.bottom){
+      if (limitBall.bottom < limitStage.bottom) {
         e.preventDefault();
         y++;
-    } 
+      }
       break;
     default:
       break;
+  }
+  $ball.style.transform = `translate(${Math.round(x * 10)}px, ${y * 10}px)`;
+}
+
+function loader (){
+  const preloader=document.querySelector('.preloader')
+    preloader.style.opacity= 0;
+    preloader.style.visibility = 'hidden'
+}
+
+function img(){
+  let list = ["build/img/html.png","build/img/css.png","build/img/js.png","build/img/react.png",
+  "build/img/gulp.png","build/img/java.png","build/img/git.png","build/img/github.png","build/img/python.png",]
+  let img;
+  let div;
+  let text;
+  let tt = d.querySelector(".imgs");
+  list.forEach(e=>{
+    switch (e){
+      case "build/img/css.png": 
+      div = d.createElement("div")
+      div.classList.add("imgs-div")
+      img = d.createElement("img");
+      img.src= `${e}`
+      text = d.createElement("p")
+      text.classList.add("texto")
+      text.innerHTML = `CSS`
+      div.appendChild(img);
+      div.appendChild(text);
+      tt.appendChild(div);
+        break;
+      case "build/img/git.png":
+        div = d.createElement("div")
+        div.classList.add("imgs-div")
+        img = d.createElement("img");
+        img.src= `${e}`
+        text = d.createElement("p")
+        text.classList.add("texto")
+        text.innerHTML = `GIT`
+        div.appendChild(img);
+        div.appendChild(text);
+        tt.appendChild(div);
+        break;
+      case "build/img/github.png":
+        div = d.createElement("div")
+        div.classList.add("imgs-div")
+        img = d.createElement("img");
+        img.src= `${e}`
+        text = d.createElement("p")
+        text.classList.add("texto")
+        text.innerHTML = `GITHUB`
+        div.appendChild(img);
+        div.appendChild(text);
+        tt.appendChild(div);
+        break;
+      case "build/img/gulp.png":
+        div = d.createElement("div")
+        div.classList.add("imgs-div")
+        img = d.createElement("img");
+        img.src= `${e}`
+        text = d.createElement("p")
+        text.classList.add("texto")
+        text.innerHTML = `GULP`
+        div.appendChild(img);
+        div.appendChild(text);
+        tt.appendChild(div);
+        break;
+      case "build/img/html.png":
+        div = d.createElement("div")
+        div.classList.add("imgs-div")
+        img = d.createElement("img");
+        img.src= `${e}`
+        text = d.createElement("p")
+        text.classList.add("texto")
+        text.innerHTML = `HTML`
+        div.appendChild(img);
+        div.appendChild(text);
+        tt.appendChild(div);
+        break;
+      case "build/img/java.png":
+        div = d.createElement("div")
+        div.classList.add("imgs-div")
+        img = d.createElement("img");
+        img.src= `${e}`
+        text = d.createElement("p")
+        text.classList.add("texto")
+        text.innerHTML = `JAVA`
+        div.appendChild(img);
+        div.appendChild(text);
+        tt.appendChild(div);
+        break;
+      case "build/img/js.png":
+        div = d.createElement("div")
+        div.classList.add("imgs-div")
+        img = d.createElement("img");
+        img.src= `${e}`
+        text = d.createElement("p")
+        text.classList.add("texto")
+        text.innerHTML = `JS`
+        div.appendChild(img);
+        div.appendChild(text);
+        tt.appendChild(div);
+        break;
+      case "build/img/python.png":
+        div = d.createElement("div")
+        div.classList.add("imgs-div")
+        img = d.createElement("img");
+        img.src= `${e}`
+        text = d.createElement("p")
+        text.classList.add("texto")
+        text.innerHTML = `PYTHON`
+        div.appendChild(img);
+        div.appendChild(text);
+        tt.appendChild(div);
+        break;
+      case "build/img/react.png":
+        div = d.createElement("div")
+        div.classList.add("imgs-div")
+        img = d.createElement("img");
+        img.src= `${e}`
+        text = d.createElement("p")
+        text.classList.add("texto")
+        text.innerHTML = `REACT`
+        div.appendChild(img);
+        div.appendChild(text);
+        tt.appendChild(div);
+        break;
     }
-    $ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+  })
 }
