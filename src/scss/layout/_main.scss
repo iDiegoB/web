@@ -91,14 +91,20 @@
 .stage{
     display: flex;
     min-height: 50vh;
+<<<<<<< HEAD
     background-color: rgba(0, 0, 0, 0.884);
     border: 3px solid rgb(109, 109, 109);
+=======
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(0, 0, 0);
+>>>>>>> 5e9af601f62bbc5125b53a53bbe3f41d1829a7c4
 }
 .ball{
     margin: auto;
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
+<<<<<<< HEAD
     background-color: #ffffff;
     border: 3px solid rgb(109, 109, 109);
 }
@@ -116,4 +122,9 @@
 }
 .imgs-div{
     width: 3rem;
+=======
+    border: 3px solid rgb(0, 0, 0);
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+>>>>>>> 5e9af601f62bbc5125b53a53bbe3f41d1829a7c4
 }
