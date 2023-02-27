@@ -122,121 +122,54 @@ function loader (){
 
 function img(){
   let list = ["build/img/html.png","build/img/css.png","build/img/js.png","build/img/react.png",
-  "build/img/gulp.png","build/img/java.png","build/img/git.png","build/img/github.png","build/img/python.png",]
+  "build/img/gulp.png","build/img/java.png","build/img/git.png","build/img/github.png","build/img/python.png",];
+  list.forEach(e=>{
+    switch (e){
+      case "build/img/css.png": 
+      contentdiv(e,"CSS")
+        break;
+      case "build/img/git.png":
+        contentdiv(e,"GIT")
+        break;
+      case "build/img/github.png":
+        contentdiv(e,"GITHUB")
+        break;
+      case "build/img/gulp.png":
+        contentdiv(e,"GULP")
+        break;
+      case "build/img/html.png":
+        contentdiv(e,"HTML")
+        break;
+      case "build/img/java.png":
+        contentdiv(e,"JAVA")
+        break;
+      case "build/img/js.png":
+        contentdiv(e,"JAVASCRIPT")
+        break;
+      case "build/img/python.png":
+        contentdiv(e,"PYTHON")
+        break;
+      case "build/img/react.png":
+        contentdiv(e,"REACT")
+        break;
+    }
+  })
+}
+
+function contentdiv(e, texto){
   let img;
   let div;
   let text;
   let tt = d.querySelector(".imgs");
-  list.forEach(e=>{
-    switch (e){
-      case "build/img/css.png": 
-      div = d.createElement("div")
-      div.classList.add("imgs-div")
-      img = d.createElement("img");
-      img.src= `${e}`
-      text = d.createElement("p")
-      text.classList.add("texto")
-      text.innerHTML = `CSS`
-      div.appendChild(img);
-      div.appendChild(text);
-      tt.appendChild(div);
-        break;
-      case "build/img/git.png":
-        div = d.createElement("div")
-        div.classList.add("imgs-div")
-        img = d.createElement("img");
-        img.src= `${e}`
-        text = d.createElement("p")
-        text.classList.add("texto")
-        text.innerHTML = `GIT`
-        div.appendChild(img);
-        div.appendChild(text);
-        tt.appendChild(div);
-        break;
-      case "build/img/github.png":
-        div = d.createElement("div")
-        div.classList.add("imgs-div")
-        img = d.createElement("img");
-        img.src= `${e}`
-        text = d.createElement("p")
-        text.classList.add("texto")
-        text.innerHTML = `GITHUB`
-        div.appendChild(img);
-        div.appendChild(text);
-        tt.appendChild(div);
-        break;
-      case "build/img/gulp.png":
-        div = d.createElement("div")
-        div.classList.add("imgs-div")
-        img = d.createElement("img");
-        img.src= `${e}`
-        text = d.createElement("p")
-        text.classList.add("texto")
-        text.innerHTML = `GULP`
-        div.appendChild(img);
-        div.appendChild(text);
-        tt.appendChild(div);
-        break;
-      case "build/img/html.png":
-        div = d.createElement("div")
-        div.classList.add("imgs-div")
-        img = d.createElement("img");
-        img.src= `${e}`
-        text = d.createElement("p")
-        text.classList.add("texto")
-        text.innerHTML = `HTML`
-        div.appendChild(img);
-        div.appendChild(text);
-        tt.appendChild(div);
-        break;
-      case "build/img/java.png":
-        div = d.createElement("div")
-        div.classList.add("imgs-div")
-        img = d.createElement("img");
-        img.src= `${e}`
-        text = d.createElement("p")
-        text.classList.add("texto")
-        text.innerHTML = `JAVA`
-        div.appendChild(img);
-        div.appendChild(text);
-        tt.appendChild(div);
-        break;
-      case "build/img/js.png":
-        div = d.createElement("div")
-        div.classList.add("imgs-div")
-        img = d.createElement("img");
-        img.src= `${e}`
-        text = d.createElement("p")
-        text.classList.add("texto")
-        text.innerHTML = `JS`
-        div.appendChild(img);
-        div.appendChild(text);
-        tt.appendChild(div);
-        break;
-      case "build/img/python.png":
-        div = d.createElement("div")
-        div.classList.add("imgs-div")
-        img = d.createElement("img");
-        img.src= `${e}`
-        text = d.createElement("p")
-        text.classList.add("texto")
-        text.innerHTML = `PYTHON`
-        div.appendChild(img);
-        div.appendChild(text);
-        tt.appendChild(div);
-        break;
-      case "build/img/react.png":
-        div = d.createElement("div")
-        div.classList.add("imgs-div")
-        img = d.createElement("img");
-        img.src= `${e}`
-        text = d.createElement("p")
-        text.classList.add("texto")
-        text.innerHTML = `REACT`
-        div.appendChild(img);
-        div.appendChild(text);
-        tt.appendChild(div);
-        break;
-    }
-  })
+
+  div = d.createElement("div")
+  div.classList.add("imgs-div")
+  img = d.createElement("img");
+  img.src= `${e}`
+  text = d.createElement("p")
+  text.classList.add("texto")
+  text.innerHTML = `${texto}`
+  div.appendChild(img);
+  div.appendChild(text);
+  tt.appendChild(div);
 }
