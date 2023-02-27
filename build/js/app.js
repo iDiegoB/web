@@ -111,11 +111,7 @@ function moveball(e, ball, stage) {
     default:
       break;
   }
-<<<<<<< HEAD
-  $ball.style.transform = `translate(${Math.round(x * 10)}px, ${y * 10}px)`;
-=======
   $ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
->>>>>>> 5e9af601f62bbc5125b53a53bbe3f41d1829a7c4
 }
 
 function loader (){
